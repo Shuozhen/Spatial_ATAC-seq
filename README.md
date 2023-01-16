@@ -41,6 +41,11 @@ curl -O https://cf.10xgenomics.com/supp/cell-atac/refdata-cellranger-atac-GRCh38
 ```
 
 **A preprocessing pipeline we developed using Snakemake workflow management system is in the Data_preprocessing folder. To run the pipeline, use the command:**
+- Test the file path
+```
+snakemake --dag | dot -Tpdf > snakemake_dag.pdf
+```
+- Sbatch the jobs
 ```
 sbatch Snakemake.sh
 ```
